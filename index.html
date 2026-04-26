@@ -6,10 +6,12 @@
 <title>Comité Valle Dorado</title>
 
 <style>
+
+/* GENERAL */
 body{
 margin:0;
-font-family:Arial;
-background:#f4f4f4;
+font-family:Arial, sans-serif;
+background:#f5f5f5;
 }
 
 /* HEADER */
@@ -21,14 +23,14 @@ padding:20px;
 }
 
 header img{
-width:80px;
+width:90px;
 }
 
-/* MENU */
+/* NAV */
 nav{
 background:#8B1E2D;
-text-align:center;
 padding:10px;
+text-align:center;
 }
 
 nav a{
@@ -36,6 +38,20 @@ color:white;
 margin:15px;
 text-decoration:none;
 font-weight:bold;
+}
+
+/* PORTADA */
+.portada{
+background:url('portada.jpg') center/cover no-repeat;
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.portada h1{
+background:rgba(0,0,0,0.6);
+display:inline-block;
+padding:15px;
 }
 
 /* SECCIONES */
@@ -57,9 +73,11 @@ padding:10px 20px;
 color:black;
 text-decoration:none;
 border-radius:5px;
+display:inline-block;
+margin-top:10px;
 }
 
-/* GALERIA */
+/* GALERIA (NO DESCARGABLE) */
 .galeria img{
 width:200px;
 margin:10px;
@@ -67,10 +85,43 @@ border-radius:10px;
 pointer-events:none;
 }
 
-/* VIDEO */
+/* VIDEO SIN DESCARGA */
 video{
 width:100%;
 max-width:600px;
+}
+
+/* ORGANIGRAMA */
+.org-container{
+text-align:center;
+}
+
+.org-nivel{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin:15px 0;
+}
+
+.org-box{
+background:#C9A44C;
+padding:15px;
+border-radius:10px;
+min-width:200px;
+font-weight:bold;
+}
+
+.jefe{
+background:#6A0F1B;
+color:white;
+}
+
+.linea{
+width:2px;
+height:30px;
+background:#6A0F1B;
+margin:0 auto;
 }
 
 /* FOOTER */
@@ -78,39 +129,80 @@ footer{
 background:#6A0F1B;
 color:white;
 text-align:center;
-padding:10px;
+padding:15px;
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="escudo.png">
+<img src="escudo-veracruz.png">
 <h1>Comité del Fraccionamiento Valle Dorado</h1>
 </header>
 
 <nav>
 <a href="#inicio">Inicio</a>
+<a href="#organigrama">Organigrama</a>
 <a href="#contacto">Contacto</a>
 <a href="#multimedia">Multimedia</a>
 <a href="#sesiones">Sesiones</a>
 </nav>
 
-<section id="inicio">
-<h2>Bienvenidos</h2>
-<p>Página oficial del Comité del Fraccionamiento Valle Dorado.</p>
+<div class="portada">
+<h1>Bienvenidos a la página oficial</h1>
+</div>
 
-<a class="btn" href="https://facebook.com/TUPAGINA" target="_blank">
+<section id="inicio">
+<h2>Inicio</h2>
+<p>Bienvenidos a la página oficial del Comité del Fraccionamiento Valle Dorado.</p>
+
+<a class="btn" href="https://www.facebook.com/share/1GYo9AeK1r/?mibextid=wwXIfr" target="_blank">
 Ir a Facebook
 </a>
+</section>
+
+<section id="organigrama">
+<h2>Organigrama</h2>
+
+<div class="org-container">
+
+<div class="org-nivel">
+<div class="org-box jefe">
+Presidenta<br>
+Profa. Silvia Hernández
+</div>
+</div>
+
+<div class="linea"></div>
+
+<div class="org-nivel">
+<div class="org-box">
+Secretario<br>
+Lic. Juan Manuel Coeto
+</div>
+</div>
+
+<div class="linea"></div>
+
+<div class="org-nivel">
+<div class="org-box">Vocal 1<br>Ing. Héctor Hernández</div>
+<div class="org-box">Vocal 2<br>Sra. Adriana de Jesús Valladares</div>
+<div class="org-box">Vocal 3<br>Profa. María del Rosario Franco</div>
+</div>
+
+</div>
+
 </section>
 
 <section id="contacto">
 <h2>Contacto</h2>
 
-<a class="btn" href="mailto:TU_CORREO_AQUI">
-Enviar correo
+<p>Atención ciudadana:</p>
+
+<a class="btn" href="mailto:atencion.v.dorado@infinitummail.com">
+📧 atencion.v.dorado@infinitummail.com
 </a>
 
 </section>
@@ -119,12 +211,12 @@ Enviar correo
 
 <h2>Multimedia</h2>
 
-<h3>📄 Documentos</h3>
-<ul>
-<li><a href="documento1.pdf" download>Descargar documento</a></li>
-</ul>
+<h3>📄 Documentos (descargables)</h3>
+<a href="documento1.pdf" class="btn" download>
+Descargar documento
+</a>
 
-<h3>📸 Galería</h3>
+<h3>📸 Galería (solo visualización)</h3>
 <div class="galeria">
 <img src="foto1.jpg">
 <img src="foto2.jpg">
